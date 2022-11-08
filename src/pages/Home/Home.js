@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import HeaderBanner from '../Layout/Headers/HeaderBanner';
 import HomeServices from './HomeServices';
 
@@ -21,7 +21,7 @@ const Home = () => {
                     }
                 </div>
                 <div className='flex justify-center py-4'>
-                     <button className="btn btn-success ">See all</button>
+                     <Link to={`/services`}><button className="btn btn-success ">See all</button></Link>
                 </div>
             </div>
         </div>
