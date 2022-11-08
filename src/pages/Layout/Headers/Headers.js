@@ -1,31 +1,35 @@
 import { Link } from "react-router-dom";
 import React, { useContext } from 'react';
 import { AuthContext } from "../../Contexts/AuthProvider";
-
+import { BeakerIcon, UserCircleIcon } from '@heroicons/react/24/solid'
 const Headers = () => {
-    const { user,logOut } = useContext(AuthContext);
-    const handelLogout=()=>{
+    const { user, logOut } = useContext(AuthContext);
+    const handelLogout = () => {
         logOut()
-        .then(() => { })
-        .catch(error => console.error(error))
+            .then(() => { })
+            .catch(error => console.error(error))
     }
     const menu = <>
         <li className="mr-4"> <Link to='/'>Home</Link> </li>
         <li className="mr-4"> <Link to='/'>Blog</Link> </li>
         {user?.uid ?
 
-            <> <li className="mr-4"> <Link  onClick={handelLogout}>LogOut</Link></li>
-                <div className="avatar">
-                    <div className="w-12 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                        <img alt="" src={user?.photoURL} />
-                    </div>
-                </div></>
+            <> <li className="mr-4"> <Link onClick={handelLogout}>LogOut</Link></li>
+            </>
             :
             <>  <li className="mr-4"> <Link to='/login'>Login</Link></li>
                 <li className="mr-4"> <Link to='/signin'>SignIn</Link></li></>
         }
-       
 
+        <div className="avatar">
+            <div className="w-12 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                {user?.photoURL ?
+                    <img alt="" src={user?.photoURL} /> :
+
+                    <UserCircleIcon></UserCircleIcon>
+                }
+            </div>
+        </div>
     </>
     return (
         <div className="navbar bg-base-100">
