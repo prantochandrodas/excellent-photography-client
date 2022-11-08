@@ -4,6 +4,7 @@ import Home from "../../Home/Home";
 import Main from "../../Layout/Main/Main";
 import Login from "../../Login/Login";
 import Services from "../../Services/Services";
+import PrivetRoute from "../PrivetRoute/PrivetRoute";
 
 const router=createBrowserRouter([
     {
@@ -18,7 +19,9 @@ const router=createBrowserRouter([
         {
           path:'/services',
           loader:()=>fetch('http://localhost:5000/services'),
-          element:<Services></Services>
+          element:<PrivetRoute>
+            <Services></Services>
+          </PrivetRoute>
         },
         {
           path:'/login',

@@ -3,23 +3,26 @@ import React, { useContext } from 'react';
 import { AuthContext } from "../../Contexts/AuthProvider";
 
 const Headers = () => {
-    const { user } = useContext(AuthContext);
-
-    console.log(user);
+    const { user,logOut } = useContext(AuthContext);
+    const handelLogout=()=>{
+        logOut()
+        .then(() => { })
+        .catch(error => console.error(error))
+    }
     const menu = <>
-        <li> <Link to='/'>Home</Link> </li>
-        <li> <Link to='/'>Blog</Link> </li>
+        <li className="mr-4"> <Link to='/'>Home</Link> </li>
+        <li className="mr-4"> <Link to='/'>Blog</Link> </li>
         {user?.uid ?
 
-            <> <li> <Link to='/logout'>LogOut</Link></li>
+            <> <li className="mr-4"> <Link  onClick={handelLogout}>LogOut</Link></li>
                 <div className="avatar">
-                    <div className="w-14 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                    <div className="w-12 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
                         <img alt="" src={user?.photoURL} />
                     </div>
                 </div></>
             :
-            <>  <li> <Link to='/login'>Login</Link></li>
-                <li> <Link to='/signin'>Signin</Link></li></>
+            <>  <li className="mr-4"> <Link to='/login'>Login</Link></li>
+                <li className="mr-4"> <Link to='/signin'>SignIn</Link></li></>
         }
        
 

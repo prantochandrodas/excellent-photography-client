@@ -1,13 +1,17 @@
 import { GoogleAuthProvider } from 'firebase/auth';
 import React, { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Navigate, useLocation, useNavigate } from 'react-router-dom';
+import { toast, ToastContainer } from 'react-toastify';
 import { AuthContext } from '../Contexts/AuthProvider';
-
+import 'react-toastify/dist/ReactToastify.css';
 const Login = () => {
-
-  
+    const [error,setError]=useState('');
     const {login,signInwithGoogle}=useContext(AuthContext);
+    const location = useLocation();
+    const navigate=useNavigate();
+    const from = location.state?.from?.pathname || '/';
     const provider=new GoogleAuthProvider();
+  
     const handelLogin=event=>{
         event.preventDefault();
         const form=event.target;
@@ -17,10 +21,11 @@ const Login = () => {
         .then(result=>{
             const user=result.user;
             console.log(user);
+            navigate(from,{replace:true});
         })
-        .then(error=>{ 
+        .catch(error=>{ 
             console.log(error);
-           
+           setError(error.message);
         })
     }
 
@@ -29,7 +34,7 @@ const Login = () => {
         signInwithGoogle(provider)
         .then(result=>{
             const user=result.user;
-            console.log(user);
+            navigate(from,{replace:true});
         })
         .then(error=>{ 
             console.log(error);
@@ -64,10 +69,11 @@ const Login = () => {
                         </div>
                         
                     </form>
-                    <p className='text-center p-5'>New to Excellent Photography <Link className='text-orange-600 font-bold' to="/signup">Sign Up</Link> </p>
-                     
+                    <p className='text-center p-5'>New to Excellent Photography <Link className='text-orange-600 font-bold' to="/signIn">Sign Up</Link> </p>
+                     <p className=' mx-auto my-4 p-4 text-red-600'>{error}</p>
                 </div>
             </div>
+           
         </div>
     );
 };

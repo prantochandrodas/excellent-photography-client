@@ -1,8 +1,9 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../pages/Contexts/AuthProvider';
 
 const Signin = () => {
+    const navigate=useNavigate();
     const {createUser}=useContext(AuthContext);
     const handelSignin=event=>{
         event.preventDefault();
@@ -15,6 +16,7 @@ const Signin = () => {
         .then(result=>{
             const user=result.user;
             console.log(user);
+            navigate('/')
         })
         .then(error=>console.log(error))
     }
