@@ -1,8 +1,8 @@
 import React from 'react';
-import bannerImg from '../../../assets/banner.jpg';
+import bannerImg from '../../../assets/banner2.jpg';
 const HeaderBanner = () => {
     return (
-        <div className="hero h-96 my-12" style={{ backgroundImage: `url(${bannerImg})` }}>
+        <div className="hero h-96 my-12 w-9/12 mx-auto" style={{ backgroundImage: `url(${bannerImg})` }}>
             <div className="hero-overlay bg-opacity-60"></div>
             <div className="hero-content text-center text-neutral-content">
                 <div className="max-w-md">

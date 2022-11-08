@@ -19,7 +19,7 @@ const Headers = () => {
                         {menu}
                     </ul>
                 </div>
-                <Link className="btn  normal-case text-xl">
+                <Link className="btn lg:ml-16 mt-4 normal-case text-xl">
                     Excellent-Photography
                 </Link>
             </div>
