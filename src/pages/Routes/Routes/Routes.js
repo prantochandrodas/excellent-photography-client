@@ -3,7 +3,10 @@ import Signin from "../../../Signin/Signin";
 import Home from "../../Home/Home";
 import Main from "../../Layout/Main/Main";
 import Login from "../../Login/Login";
+import ServiceReview from "../../Services/ServiceReview";
 import Services from "../../Services/Services";
+import ServicesDetails from "../../Services/ServicesDetails";
+
 import PrivetRoute from "../PrivetRoute/PrivetRoute";
 
 const router=createBrowserRouter([
@@ -30,7 +33,18 @@ const router=createBrowserRouter([
         {
           path:'/signIn',
           element:<Signin></Signin>
+        },
+        {
+          path:'/services/:id',
+          loader:({params})=>fetch(`http://localhost:5000/services/${params.id}`),
+          element:<ServicesDetails></ServicesDetails>
+        },
+        {
+          path:'/services/:id',
+          loader:({params})=>fetch(`http://localhost:5000/services/${params.id}`),
+          element:<ServiceReview></ServiceReview>
         }
+        
       ]
 
     }

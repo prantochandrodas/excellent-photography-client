@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import HeaderBanner from '../Layout/Headers/HeaderBanner';
+import HomeBlogs from './HomeBlogs';
 import HomeServices from './HomeServices';
 
 const Home = () => {
@@ -9,6 +10,7 @@ const Home = () => {
     return (
         <div>
             <HeaderBanner></HeaderBanner>
+            <HomeBlogs></HomeBlogs>
             <div>
                 <h1 className='text-5xl font-bold ml-12'>Services</h1>
                 <div className='grid lg:grid-cols-3 grid-cols md:grid-cols-2 gap-5 p-14'>
@@ -24,6 +26,7 @@ const Home = () => {
                      <Link to={`/services`}><button className="btn btn-success ">See all</button></Link>
                 </div>
             </div>
+           
         </div>
     );
 };
