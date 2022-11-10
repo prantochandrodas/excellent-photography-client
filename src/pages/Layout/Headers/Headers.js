@@ -20,7 +20,7 @@ const Headers = () => {
             <> <li className="mr-2"> <Link onClick={handelLogout}>LogOut</Link></li>
             </>
             :
-            <>  <li className=""> <Link to='/login'>Login</Link></li>
+            <> 
                 <li className=""> <Link to='/signin'>SignIn</Link></li></>
         }
 
