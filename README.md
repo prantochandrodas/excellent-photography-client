@@ -1,3 +1,12 @@
+# About my site
+* 
+    1. My site name is excellent-photography 
+    2. I make this site using react js , firebase , mongodb and some also other elements.
+    3. I show the services in the home page
+    4. I make a private route for add service and myreviews
+    5. I add review added form 
+    6. I add service add page on this site
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
