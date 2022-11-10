@@ -8,16 +8,22 @@ import DynamicTitle from '../Hooks/DynamicTitle';
 
 const MyReviews = () => {
     DynamicTitle('MyReview');
-    const { user } = useContext(AuthContext);
+    const { user,logOut } = useContext(AuthContext);
     const [myReviews, setMyreviews] = useState([]);
     console.log(user);
     useEffect(() => {
+     
         fetch(`http://localhost:5000/myreviews?email=${user?.email}`,{
             headers:{
                 authorization: `Bearer ${localStorage.getItem('token')}`
             }
         })
-            .then(res => res.json())
+            .then(res =>{
+                if(res.status === 401 || res.status === 403){
+                    logOut();
+                }
+                return res.json()
+            })
             .then(data => setMyreviews(data));
     }, [user?.email]);
 
@@ -31,16 +37,16 @@ const MyReviews = () => {
                 .then(data => {
                     console.log(data)
                     if (data.deletedCount) {
-                        toast.error('Deleted sucess fully', {
-                            position: "top-center",
-                            autoClose: 5000,
-                            hideProgressBar: false,
-                            closeOnClick: true,
-                            pauseOnHover: true,
-                            draggable: true,
-                            progress: undefined,
-                            theme: "light",
-                        });
+                        // toast.error('Deleted sucess fully', {
+                        //     position: "top-center",
+                        //     autoClose: 5000,
+                        //     hideProgressBar: false,
+                        //     closeOnClick: true,
+                        //     pauseOnHover: true,
+                        //     draggable: true,
+                        //     progress: undefined,
+                        //     theme: "light",
+                        // });
                         const remaining = myReviews.filter(rev => rev._id !== id);
                         setMyreviews(remaining);
                     }
