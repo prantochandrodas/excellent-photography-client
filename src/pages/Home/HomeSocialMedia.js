@@ -11,6 +11,10 @@ const HomeSocialMedia = () => {
                     <FontAwesomeIcon icon={faFacebook} className='text-5xl  text-gray-600'></FontAwesomeIcon>
                     <h2 className='4xl'>Connect us on facebook and be mamber of our facebook family</h2>
                 </div>
+                <div className='ml-5 mt-4 p-2 border-solid shadow-2xl border-2 border-gray-600 rounded-lg'>
+                    <FontAwesomeIcon icon={faInstagram} className='text-5xl text-gray-600'></FontAwesomeIcon>
+                    <h2 className='4xl'>Go to our instragram and do follow us for all latest update</h2>
+                </div>
                
                
             </div>
