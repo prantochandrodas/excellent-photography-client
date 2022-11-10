@@ -52,7 +52,8 @@ const MyReviews = () => {
                 <>
                     <div className='grid lg:grid-cols-3 gap-12 p-12'>
                         {
-                            myReviews.map(myReview => <>
+                            myReviews.map(myReview =>
+                             <>
                                 <div className="card bg-slate-50 ml-4 shadow-xl">
                                     <div>
                                         <div className='flex '>

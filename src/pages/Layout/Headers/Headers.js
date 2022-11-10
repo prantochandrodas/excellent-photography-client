@@ -11,7 +11,7 @@ const Headers = () => {
     }
     const menu = <>
         <li className=""> <Link to='/'>Home</Link> </li>
-        <li className=""> <Link to='/'>Blog</Link> </li>
+        <li className=""> <Link to='/blogs'>Blog</Link> </li>
         <li className=""> <Link to='/services'>Services</Link> </li>
         <li className=""> <Link to='/myreviews'>My Reviews</Link> </li>
         <li className=""> <Link to='/servicesAdd'>Add Services</Link> </li>

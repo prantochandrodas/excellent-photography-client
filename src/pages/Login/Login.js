@@ -3,7 +3,9 @@ import React, { useContext, useState } from 'react';
 import { Link, Navigate, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../Contexts/AuthProvider';
 import 'react-toastify/dist/ReactToastify.css';
+import DynamicTitle from '../Hooks/DynamicTitle';
 const Login = () => {
+    DynamicTitle('Login');
     const [error,setError]=useState('');
     const {login,signInwithGoogle}=useContext(AuthContext);
     const location = useLocation();
@@ -45,7 +47,7 @@ const Login = () => {
         <div className="hero min-h-full py-5 bg-base-200">
             <div className="hero-content flex-col lg:flex-row-reverse">
                
-                <div className="card flex-shrink-0 w-96 max-w-xl shadow-2xl bg-base-100">
+                <div className="card flex-shrink-0 lg:w-96 max-w-xl shadow-2xl bg-base-100">
                 <h1 className="text-4xl font-bold text-center mt-4">Login now</h1>
                     <form onSubmit={handelLogin} className="card-body">
                         <div className="form-control">

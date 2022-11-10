@@ -3,7 +3,8 @@ import { Link, useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../Contexts/AuthProvider';
 import DynamicTitle from '../Hooks/DynamicTitle';
 import Review from '../Review/Review';
-
+import { PhotoProvider, PhotoView } from 'react-photo-view';
+import 'react-photo-view/dist/react-photo-view.css';
 const ServicesDetails = () => {
     DynamicTitle('Details');
     const [allreviews, setAllReview] = useState([]);
@@ -51,7 +52,13 @@ const ServicesDetails = () => {
     return (
         <div>
             <div className="card w-3/4 mx-auto bg-base-100 shadow-xl my-12">
-                <figure><img src={img} alt="Shoes" /></figure>
+                <figure>
+                <PhotoProvider>
+                        <PhotoView src={img}>
+                            <img src={img} alt="" />
+                        </PhotoView>
+                    </PhotoProvider>
+                </figure>
                 <div className="card-body">
                     <h2 className="card-title">{category_name}</h2>
                     <p>{details}</p>

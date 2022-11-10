@@ -20,33 +20,47 @@ const ServicesAdd = () => {
             details,
            img
         }
-        fetch('http://localhost:5000/addServices', {
-            method: 'POST',
-            headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify(service)
-
-        }).then(res => res.json())
-            .then(data => {
-                if(data.acknowledged){
-                    alert('Order placed sucessfully');
-                    toast.success('Services added successfully', {
-                        position: "top-center",
-                        autoClose: 5000,
-                        hideProgressBar: false,
-                        closeOnClick: true,
-                        pauseOnHover: true,
-                        draggable: true,
-                        progress: undefined,
-                        theme: "light",
-                        });
-                       
-                   form.reset();
-
-                }
-            })
-            .catch(error => console.log(error))
+        if(details.length<200){
+            toast.error('Please enter more then 200 character details', {
+                position: "top-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+            });
+        }else{
+            fetch('http://localhost:5000/addServices', {
+                method: 'POST',
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify(service)
+    
+            }).then(res => res.json())
+                .then(data => {
+                    if(data.acknowledged){
+                        alert('Services placed sucessfully');
+                        toast.success('Services added successfully', {
+                            position: "top-center",
+                            autoClose: 5000,
+                            hideProgressBar: false,
+                            closeOnClick: true,
+                            pauseOnHover: true,
+                            draggable: true,
+                            progress: undefined,
+                            theme: "light",
+                            });
+                           
+                       form.reset();
+    
+                    }
+                })
+                .catch(error => console.log(error))
+        }
+       
     }
     return (
         <div>

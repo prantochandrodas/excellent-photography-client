@@ -1,8 +1,10 @@
 import React, { useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../pages/Contexts/AuthProvider';
+import DynamicTitle from '../pages/Hooks/DynamicTitle';
 
 const Signin = () => {
+    DynamicTitle('Signin');
     const navigate=useNavigate();
     const {createUser}=useContext(AuthContext);
     const handelSignin=event=>{
@@ -24,7 +26,7 @@ const Signin = () => {
         <div className="hero min-h-screen bg-base-200">
             <div className="hero-content flex-col lg:flex-row-reverse">
                
-                <div className="card flex-shrink-0 w-96 max-w-xl shadow-2xl bg-base-100">
+                <div className="card flex-shrink-0 lg:w-96  max-w-xl shadow-2xl bg-base-100">
                 <h1 className="text-4xl font-bold text-center mt-4">Signin now</h1>
                     <form onSubmit={handelSignin}  className="card-body">
                         <div className="form-control">

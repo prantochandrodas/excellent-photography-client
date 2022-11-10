@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import Signin from "../../../Signin/Signin";
+import Blogs from "../../Blogs/Blogs";
 import ErrorPage from "../../ErrorPage/ErrorPage";
 import Home from "../../Home/Home";
 import Main from "../../Layout/Main/Main";
@@ -25,9 +26,9 @@ const router=createBrowserRouter([
         {
           path:'/services',
           loader:()=>fetch('http://localhost:5000/services'),
-          element:<PrivetRoute>
+          element:
             <Services></Services>
-          </PrivetRoute>
+         
         },
         {
           path:'/login',
@@ -50,6 +51,11 @@ const router=createBrowserRouter([
               <ServicesAdd></ServicesAdd>
             </PrivetRoute>
           },
+          {
+            path:"/blogs",
+            element:<Blogs></Blogs>
+
+          } ,
           {
             path:"*",
             element:<ErrorPage></ErrorPage>
