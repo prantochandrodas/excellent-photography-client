@@ -37,16 +37,16 @@ const MyReviews = () => {
                 .then(data => {
                     console.log(data)
                     if (data.deletedCount) {
-                        // toast.error('Deleted sucess fully', {
-                        //     position: "top-center",
-                        //     autoClose: 5000,
-                        //     hideProgressBar: false,
-                        //     closeOnClick: true,
-                        //     pauseOnHover: true,
-                        //     draggable: true,
-                        //     progress: undefined,
-                        //     theme: "light",
-                        // });
+                        toast.error('Deleted sucess fully', {
+                            position: "top-center",
+                            autoClose: 5000,
+                            hideProgressBar: false,
+                            closeOnClick: true,
+                            pauseOnHover: true,
+                            draggable: true,
+                            progress: undefined,
+                            theme: "light",
+                        });
                         const remaining = myReviews.filter(rev => rev._id !== id);
                         setMyreviews(remaining);
                     }
