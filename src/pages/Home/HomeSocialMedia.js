@@ -19,7 +19,10 @@ const HomeSocialMedia = () => {
                     <FontAwesomeIcon icon={faTwitter} className="text-5xl text-gray-600"></FontAwesomeIcon>
                     <h2 className='4xl'>Follow us on Twitter . Get all the info of our website and be with us</h2>
                 </div>
-              
+                <div className='ml-5 mt-4 p-2 border-solid shadow-2xl border-2 border-gray-600 rounded-lg'>
+                    <FontAwesomeIcon icon={faYoutube} className="text-5xl text-gray-600"></FontAwesomeIcon>
+                    <h2 className='4xl'>Subscribe our chanel and keep supporting us . And learn the about all the latest weeding blogs</h2>
+                </div>
                
             </div>
         </div>
