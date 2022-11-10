@@ -7,7 +7,7 @@ const PrivetRoute = ({children}) => {
     const {loading,user}=useContext(AuthContext)
     const location=useLocation();
     if(loading){
-      
+        return <Spinner></Spinner> 
     }
     if(!user){
         return <Navigate to="/login" state={{from: location}} replace></Navigate>
