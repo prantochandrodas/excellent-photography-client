@@ -1,10 +1,13 @@
 import { createBrowserRouter } from "react-router-dom";
 import Signin from "../../../Signin/Signin";
+import ErrorPage from "../../ErrorPage/ErrorPage";
 import Home from "../../Home/Home";
 import Main from "../../Layout/Main/Main";
 import Login from "../../Login/Login";
-import ServiceReview from "../../Services/ServiceReview";
+import MyReviews from "../../MyReviews/MyReviews";
+// import ServiceReview from "../../Services/ServiceReview";
 import Services from "../../Services/Services";
+import ServicesAdd from "../../Services/ServicesAdd";
 import ServicesDetails from "../../Services/ServicesDetails";
 
 import PrivetRoute from "../PrivetRoute/PrivetRoute";
@@ -35,15 +38,36 @@ const router=createBrowserRouter([
           element:<Signin></Signin>
         },
         {
+          path:'/myreviews',
+          element:<PrivetRoute>
+            <MyReviews></MyReviews>
+          </PrivetRoute>
+  
+          },
+          {
+            path:'/servicesAdd',
+            element:<PrivetRoute>
+              <ServicesAdd></ServicesAdd>
+            </PrivetRoute>
+          },
+          {
+            path:"*",
+            element:<ErrorPage></ErrorPage>
+
+          }
+          ,
+        {
           path:'/services/:id',
           loader:({params})=>fetch(`http://localhost:5000/services/${params.id}`),
           element:<ServicesDetails></ServicesDetails>
         },
-        {
-          path:'/services/:id',
-          loader:({params})=>fetch(`http://localhost:5000/services/${params.id}`),
-          element:<ServiceReview></ServiceReview>
-        }
+    
+        // {
+        //   path:'/services/:id',
+        //   loader:({params})=>fetch(`http://localhost:5000/services/${params.id}`),
+        //   element:<ServiceReview></ServiceReview>
+        // }
+      
         
       ]
 

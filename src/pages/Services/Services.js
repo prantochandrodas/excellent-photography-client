@@ -1,11 +1,11 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
+import DynamicTitle from '../Hooks/DynamicTitle';
 import ServiceCart from './ServiceCart';
-import ServiceReview from './ServiceReview';
 
 const Services = () => {
     const services = useLoaderData();
-   
+    DynamicTitle('Services');
     return (
         <div className=' lg:my-12'> 
             <h2 className='text-5xl text-center my-12'>All services</h2>

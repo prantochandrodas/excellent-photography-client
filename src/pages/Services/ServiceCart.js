@@ -1,6 +1,5 @@
-import React, { useContext } from 'react';
+
 import { Link } from 'react-router-dom';
-import { AuthContext } from '../Contexts/AuthProvider';
 
 const ServiceCart = ({ service }) => {
     const { img, category_name, details, _id } = service;

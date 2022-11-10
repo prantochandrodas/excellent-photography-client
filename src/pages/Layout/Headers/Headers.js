@@ -10,16 +10,18 @@ const Headers = () => {
             .catch(error => console.error(error))
     }
     const menu = <>
-        <li className="mr-4"> <Link to='/'>Home</Link> </li>
-        <li className="mr-4"> <Link to='/'>Blog</Link> </li>
-        <li className="mr-4"> <Link to='/services'>Services</Link> </li>
+        <li className=""> <Link to='/'>Home</Link> </li>
+        <li className=""> <Link to='/'>Blog</Link> </li>
+        <li className=""> <Link to='/services'>Services</Link> </li>
+        <li className=""> <Link to='/myreviews'>My Reviews</Link> </li>
+        <li className=""> <Link to='/servicesAdd'>Add Services</Link> </li>
         {user?.uid ?
 
-            <> <li className="mr-4"> <Link onClick={handelLogout}>LogOut</Link></li>
+            <> <li className="mr-2"> <Link onClick={handelLogout}>LogOut</Link></li>
             </>
             :
-            <>  <li className="mr-4"> <Link to='/login'>Login</Link></li>
-                <li className="mr-4"> <Link to='/signin'>SignIn</Link></li></>
+            <>  <li className=""> <Link to='/login'>Login</Link></li>
+                <li className=""> <Link to='/signin'>SignIn</Link></li></>
         }
 
         <div className="avatar">
@@ -48,7 +50,7 @@ const Headers = () => {
                 </Link>
             </div>
             <div className="navbar-center hidden lg:flex pl-80 ">
-                <ul className="menu menu-horizontal pr-12">
+                <ul className="menu menu-horizontal">
                     {menu}
                 </ul>
             </div>

@@ -1,7 +1,6 @@
 import { GoogleAuthProvider } from 'firebase/auth';
 import React, { useContext, useState } from 'react';
 import { Link, Navigate, useLocation, useNavigate } from 'react-router-dom';
-import { toast, ToastContainer } from 'react-toastify';
 import { AuthContext } from '../Contexts/AuthProvider';
 import 'react-toastify/dist/ReactToastify.css';
 const Login = () => {

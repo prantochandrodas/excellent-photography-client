@@ -1,16 +1,19 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../Contexts/AuthProvider';
+import DynamicTitle from '../Hooks/DynamicTitle';
 import Review from '../Review/Review';
 
 const ServicesDetails = () => {
-  
+    DynamicTitle('Details');
+    const [allreviews, setAllReview] = useState([]);
     const service = useLoaderData();
     const { img, category_name, details, _id } = service;
     const { user } = useContext(AuthContext);
     // console.log(user);
     
     const handelReview = event => {
+       
         event.preventDefault();
         const form = event.target;
         const name = `${form.firstName.value} ${form.lastName.value}`;
@@ -33,17 +36,17 @@ const ServicesDetails = () => {
         }).then(res => res.json())
             .then(data => {
                 if (data.acknowledged) {
-                    alert('Order placed sucessfully');
+                    alert('revjiew placed sucessfully');
+                    setAllReview([...allreviews,reviews])
                     form.reset()
                 }
             })
             .catch(error => console.log(error));
-    }
-    // useEffect(() => {
-    //     fetch(`http://localhost:5000/reviews?email=${user?.email}&&review_id=${_id}`)
-    //         .then(res => res.json())
-    //         .then(data => setAllReview(data))
-    // }, [user?.email]);
+
+
+           
+        }
+     
 
     return (
         <div>
@@ -63,14 +66,17 @@ const ServicesDetails = () => {
                 </div>
 
             </div>
-            <div>
+           <div>
                 {
                     <Review id={_id}
                         category_name={category_name}
+                        allreviews={allreviews}
+                        setAllReview={setAllReview}
                     ></Review>
                 }
                
-            </div>
+            </div>  
+        
             {user?.uid ?
                 <> <div className='w-9/12 mx-auto my-12'>
                     <form onSubmit={handelReview}>

@@ -1,12 +1,14 @@
 import React from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
+import DynamicTitle from '../Hooks/DynamicTitle';
 import HeaderBanner from '../Layout/Headers/HeaderBanner';
 import HomeBlogs from './HomeBlogs';
 import HomeServices from './HomeServices';
+import HomeSocialMedia from './HomeSocialMedia';
 
 const Home = () => {
     const services = useLoaderData();
-
+    DynamicTitle('Home');
     return (
         <div>
             <HeaderBanner></HeaderBanner>
@@ -26,6 +28,7 @@ const Home = () => {
                      <Link to={`/services`}><button className="btn btn-success ">See all</button></Link>
                 </div>
             </div>
+            <HomeSocialMedia></HomeSocialMedia>
            
         </div>
     );
