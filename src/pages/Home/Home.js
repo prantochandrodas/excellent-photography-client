@@ -5,7 +5,7 @@ import HeaderBanner from '../Layout/Headers/HeaderBanner';
 import HomeBlogs from './HomeBlogs';
 import HomeServices from './HomeServices';
 import HomeSocialMedia from './HomeSocialMedia';
-
+// home
 const Home = () => {
     const services = useLoaderData();
     DynamicTitle('Home');
