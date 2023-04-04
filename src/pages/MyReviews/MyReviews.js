@@ -13,7 +13,7 @@ const MyReviews = () => {
     console.log(user);
     useEffect(() => {
      
-        fetch(`http://localhost:5000/myreviews?email=${user?.email}`,{
+        fetch(`https://excellent-photography-server.vercel.app/myreviews?email=${user?.email}`,{
             
             headers:{
                 authorization: `Bearer ${localStorage.getItem('token')}`
@@ -31,7 +31,7 @@ const MyReviews = () => {
     const handelDelete = id => {
         const proceed = window.confirm('Are you sure , You want to cancel this review');
         if (proceed) {
-            fetch(`http://localhost:5000/reviews/${id}`, {
+            fetch(`https://excellent-photography-server.vercel.app/reviews/${id}`, {
                 method: 'DELETE',
             })
                 .then(res => res.json())

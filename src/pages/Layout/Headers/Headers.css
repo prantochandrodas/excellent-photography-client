@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Miao&display=swap');
+.NavFont {
+    font-family: 'Noto Sans Miao', sans-serif!important;
+}
+.active {
+    background-color: #eee!important;
+    color: #1a73e8!important;
+    border-bottom: 2px solid #1a73e8;
+}

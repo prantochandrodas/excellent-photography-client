@@ -32,7 +32,7 @@ const ServicesAdd = () => {
                 theme: "light",
             });
         }else{
-            fetch('http://localhost:5000/addServices', {
+            fetch('https://excellent-photography-server.vercel.app/addServices', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'

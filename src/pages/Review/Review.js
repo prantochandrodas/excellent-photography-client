@@ -3,7 +3,7 @@ import SingelServiceReview from '../Services/SingelServiceReview';
 const Review = ({ id, category_name ,setAllReview,allreviews}) => {
   
     useEffect(() => {
-        fetch(`http://localhost:5000/reviews?review_id=${id}`)
+        fetch(`https://excellent-photography-server.vercel.app/reviews?review_id=${id}`)
             .then(res => res.json())
             .then(data => setAllReview(data));
     }, []);

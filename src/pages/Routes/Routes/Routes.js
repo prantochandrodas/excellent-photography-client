@@ -21,11 +21,11 @@ const router=createBrowserRouter([
         {
             path:'/',
             element:<Home></Home>,
-            loader:async()=>fetch('http://localhost:5000/services/home')
+            loader:()=>fetch('https://excellent-photography-server.vercel.app/services/home')
         },
         {
           path:'/services',
-          loader:()=>fetch('http://localhost:5000/services'),
+          loader:()=>fetch('https://excellent-photography-server.vercel.app/services'),
           element:
             <Services></Services>
          
@@ -64,13 +64,13 @@ const router=createBrowserRouter([
           ,
         {
           path:'/services/:id',
-          loader:({params})=>fetch(`http://localhost:5000/services/${params.id}`),
+          loader:({params})=>fetch(`https://excellent-photography-server.vercel.app/services/${params.id}`),
           element:<ServicesDetails></ServicesDetails>
         },
     
         // {
         //   path:'/services/:id',
-        //   loader:({params})=>fetch(`http://localhost:5000/services/${params.id}`),
+        //   loader:({params})=>fetch(`https://excellent-photography-server.vercel.app/services/${params.id}`),
         //   element:<ServiceReview></ServiceReview>
         // }
       
