@@ -7,10 +7,10 @@
 }
 @media only screen and (max-width:688px) {
     .carousel {
-        height: 220px!important;
+        height: 320px!important;
     }
 
     .carousel_child img {
-        height: 200px!important;
+        height: 320px!important;
     }
 }

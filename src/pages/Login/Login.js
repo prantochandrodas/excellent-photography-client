@@ -65,9 +65,9 @@ const Login = () => {
     }
     return (
         <div className="hero min-h-full py-5 bg-base-200">
-            <div className="hero-content flex-col lg:flex-row-reverse">
+            <div className="hero-content flex-col lg:flex-row-reverse p-0">
                
-                <div className="card flex-shrink-0 lg:w-96 max-w-xl shadow-2xl bg-base-100">
+                <div className="card flex-shrink-0 lg:w-96 w-[90%] max-w-xl shadow-2xl bg-base-100">
                 <h1 className="text-4xl font-bold text-center mt-4">Login now</h1>
                     <form onSubmit={handelLogin} className="card-body">
                         <div className="form-control">
