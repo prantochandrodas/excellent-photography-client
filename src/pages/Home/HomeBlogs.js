@@ -21,10 +21,10 @@ const HomeBlogs = () => {
         <div className='lg:flex lg:flex-row-reverse sm:flex sm:flex-col-reverse  lg:w-3/4 mx-auto lg:my-10 sm:my-4 '>
            
             <div className='lg:w-9/12 flex flex-col items-center justify-center'>
-                <h2 className='lg:text-4xl text-3xl font-semibold text-center'>Words From My Couples</h2>
-                    <p className='text-center lg:mt-12 mt-2 lg:px-10 px-4'>They have give the amazing service .We  loved the pictures and videos .They are the professional for this taske .</p>
+                <h2 className='text-start lg:text-4xl text-3xl font-semibold lg:px-10 px-4'>Words From My Couples</h2>
+                    <p className='text-start lg:mt-4 mt-2 lg:px-10 px-4'>They have give the amazing service .We  loved the pictures and videos .They are the professional for this taske .</p>
             </div>
-            <div className="carousel lg:w-8/12  lg:ml-5 lg:mr-5 ml-0 mr-0 rounded-sm">
+            <div className="blog_carousel lg:w-8/12  lg:ml-5 lg:mr-5 ml-0 mr-0 rounded-sm align-middle">
             <Slider {...settings} className="blog_carousel">
                 <div className="w-full blog_carousel_clild">
                     <img alt='' src={img} className="w-full" />
