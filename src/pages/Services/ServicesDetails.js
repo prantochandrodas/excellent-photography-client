@@ -12,9 +12,9 @@ const ServicesDetails = () => {
     const { img, category_name, details, _id } = service;
     const { user } = useContext(AuthContext);
     // console.log(user);
-    
+
     const handelReview = event => {
-       
+
         event.preventDefault();
         const form = event.target;
         const name = `${form.firstName.value} ${form.lastName.value}`;
@@ -38,22 +38,23 @@ const ServicesDetails = () => {
             .then(data => {
                 if (data.acknowledged) {
                     alert('revjiew placed sucessfully');
-                    setAllReview([...allreviews,reviews])
+                    setAllReview([...allreviews, reviews])
                     form.reset()
                 }
             })
             .catch(error => console.log(error));
 
 
-           
-        }
-     
+
+    }
+
 
     return (
         <div>
-            <div className="card w-3/4 mx-auto bg-base-100 shadow-xl my-12">
+            <div data-aos="zoom-in"
+                data-aos-duration="1000" className="card lg:w-3/4 w-[90%] mx-auto bg-base-100 shadow-xl my-12">
                 <figure>
-                <PhotoProvider>
+                    <PhotoProvider>
                         <PhotoView src={img}>
                             <img src={img} alt="" />
                         </PhotoView>
@@ -73,7 +74,8 @@ const ServicesDetails = () => {
                 </div>
 
             </div>
-           <div>
+            <div data-aos="zoom-in"
+                data-aos-duration="1000">
                 {
                     <Review id={_id}
                         category_name={category_name}
@@ -81,13 +83,14 @@ const ServicesDetails = () => {
                         setAllReview={setAllReview}
                     ></Review>
                 }
-               
-            </div>  
-        
+
+            </div>
+
             {user?.uid ?
-                <> <div className='w-9/12 mx-auto my-12'>
+                <> <div data-aos="zoom-in"
+                    data-aos-duration="1000" className='lg:w-9/12 w-[90%] mx-auto my-12'>
                     <form onSubmit={handelReview}>
-                        <h2 className="text-4xl my-4">Please give us your honest review about Our: {category_name}</h2>
+                        <h2 className="lg:text-4xl text-xl my-4">Please give us your honest review about Our: {category_name}</h2>
 
                         <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
                             <input name="firstName" type="text" placeholder="First Name" className="input input-ghost w-full  input-bordered" />
@@ -102,22 +105,24 @@ const ServicesDetails = () => {
                 </div></>
                 :
                 <>
-                    <h1 className='text-3xl text-center my-12 text-orange-600'>You are not Login to the Site please go to <Link to={'/login'} className="text-blue-600">Login</Link></h1>
-                    <div className='w-9/12 mx-auto my-12'>
-                    <form onSubmit={handelReview}>
-                        <h2 className="text-4xl my-4">Please give us your honest review about Our: {category_name}</h2>
+                    <h1 data-aos="zoom-in"
+                        data-aos-duration="1000" className='lg:text-3xl text-xl text-center my-12 text-orange-600'>You are not Login to the Site please go to <Link to={'/login'} className="text-blue-600">Login</Link></h1>
+                    <div data-aos="zoom-in"
+                        data-aos-duration="1000" className='w-9/12 mx-auto my-12'>
+                        <form onSubmit={handelReview}>
+                            <h2 className="lg:text-4xl text-xl my-4">Please give us your honest review about Our: {category_name}</h2>
 
-                        <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
-                            <input name="firstName" type="text" placeholder="First Name" className="input input-ghost w-full  input-bordered" />
-                            <input name="lastName" type="text" placeholder="Last Name" className="input input-ghost w-full  input-bordered" />
-                            <input name="email" type="text" placeholder="Your email" defaultValue={user?.email} className="input input-ghost my-4 w-full  input-bordered" readOnly />
+                            <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
+                                <input name="firstName" type="text" placeholder="First Name" className="input input-ghost w-full  input-bordered" />
+                                <input name="lastName" type="text" placeholder="Last Name" className="input input-ghost w-full  input-bordered" />
+                                <input name="email" type="text" placeholder="Your email" defaultValue={user?.email} className="input input-ghost my-4 w-full  input-bordered" readOnly />
 
-                        </div>
-                        <textarea name="review" className="textarea textarea-bordered h-24 w-full" placeholder="Give Your Review" required></textarea>
+                            </div>
+                            <textarea name="review" className="textarea textarea-bordered h-24 w-full" placeholder="Give Your Review" required></textarea>
 
-                        <input className='btn' type="submit" value="Submit Your review"disabled />
-                    </form>
-                </div>
+                            <input className='btn' type="submit" value="Submit Your review" disabled />
+                        </form>
+                    </div>
                 </>
             }
         </div>

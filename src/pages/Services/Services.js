@@ -7,9 +7,10 @@ const Services = () => {
     const services = useLoaderData();
     DynamicTitle('Services');
     return (
-        <div className='lg:my-12'> 
-            <h2 className='text-5xl text-center my-12'>All services</h2>
-            <div className='grid lg:grid-cols-3 gap-12 lg:w-9/12 lg:mx-auto '>
+        <div data-aos="zoom-in"
+        data-aos-duration="1000" className='lg:my-12'> 
+            <h2 className='lg:text-5xl text-2xl text-center lg:my-12 my-4'>All services</h2>
+            <div className='grid lg:grid-cols-3 gap-12 lg:w-9/12 lg:mx-auto w-[90%] mx-auto'>
                 {
                     services.map(service => <ServiceCart
                         key={service._id}

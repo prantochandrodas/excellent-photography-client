@@ -57,7 +57,8 @@ const MyReviews = () => {
         }
     }
     return (
-        <div>
+        <div data-aos="zoom-in"
+        data-aos-duration="1000">
             {myReviews.length > 0 ?
 
                 <>
@@ -109,7 +110,7 @@ const MyReviews = () => {
                 </> :
                 <>
 
-                    <div className='text-5xl text-center text-orange-600 h-96 pt-40'>
+                    <div className='lg:text-5xl text-2xl text-center text-orange-600 h-96 pt-40'>
                         <h1>No reviews Found</h1>
                     </div>
                 </>

@@ -63,10 +63,10 @@ const ServicesAdd = () => {
        
     }
     return (
-        <div>
+        <div data-aos="zoom-in" data-aos-duration="1000">
 
-            <h2 className='text-5xl text-center my-5'>Add new service</h2>
-             <div className='w-9/12 mx-auto my-12'>
+            <h2 className='lg:text-5xl text-3xl text-center my-2 lg:my-5'>Add new service</h2>
+             <div className='lg:w-9/12 w-[90%] mx-auto lg:my-12 my-2'>
                     <form onSubmit={handelAddService}>
                        
 

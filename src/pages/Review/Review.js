@@ -14,7 +14,7 @@ const Review = ({ id, category_name ,setAllReview,allreviews}) => {
     return (
      <div>
         { allreviews?.length>0? <>
-        <div className='grid lg:grid-cols-3 gap-12 p-12'>
+        <div className='grid lg:grid-cols-3 gap-12 lg:p-12 w-[90%] mx-auto'>
             {
                 allreviews.map(allreview => <SingelServiceReview
                     allreview={allreview}

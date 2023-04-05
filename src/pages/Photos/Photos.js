@@ -12,37 +12,38 @@ import photo8 from '../../assets/photos/photo9.jpg';
 const Photos = () => {
     return (
         <div className='lg:mb-20 lg:mt-5 my-8'>
-            <div>
+            <div data-aos="zoom-in"data-aos-duration="1000">
                 <h3 className='lg:text-2xl text-xl text-center mb-4'>PHOTGRAPHY</h3>
                 <h2 className='text-xl lg:text-4xl font-semibold text-center mb-4'>Discover Our Wedding Photoshoot</h2>
                 <p className='lg:px-32 text-xs px-4 text-center lg:text-lg mb-4'>We have complete wedding photoshoot packages from pre-wedding photography to holud wedding photography, couple photography<span className='hidden lg:inline'>, bridal photoshoot, and you name it. Explore how we capture your holy bond of love and make the special day of your life even more special.</span></p>
             </div>
             <div className='con'>
-                <div className='box'>
+                <div data-aos="zoom-in"
+                    data-aos-duration="1000" className='box'>
                     <img src={photo} alt="" />
                 </div>
-                <div className='box'>
+                <div data-aos="zoom-in"data-aos-duration="1000" className='box'>
                     <img src={photo1} alt="" />
                 </div>
-                <div className='box'>
+                <div data-aos="zoom-in"data-aos-duration="1000" className='box'>
                     <img src={photo2} alt="" />
                 </div>
-                <div className='box'>
+                <div data-aos="zoom-in"data-aos-duration="1000" className='box'>
                     <img src={photo3} alt="" />
                 </div>
-                <div className='box'>
+                <div  data-aos="zoom-in"data-aos-duration="1000" className='box'>
                     <img src={photo4} alt="" />
                 </div>
-                <div className='box'>
+                <div data-aos="zoom-in"data-aos-duration="1000" className='box'>
                     <img src={photo5} alt="" />
                 </div>
-                <div className='box'>
+                <div data-aos="zoom-in"data-aos-duration="1000" className='box'>
                     <img src={photo6} alt="" />
                 </div>
-                <div className='box'>
+                <div data-aos="zoom-in"data-aos-duration="1000" className='box'>
                     <img src={photo7} alt="" />
                 </div>
-                <div className='box'>
+                <div data-aos="zoom-in"data-aos-duration="1000" className='box'>
                     <img src={photo8} alt="" />
                 </div>
             </div>

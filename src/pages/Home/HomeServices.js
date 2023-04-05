@@ -9,7 +9,7 @@ const HomeServices = ({ service }) => {
     const { img, category_name, details, _id } = service;
 
     return (
-        <div className="card card-compact w-66 bg-base-100 shadow-xl">
+        <div  className="card card-compact w-66 bg-base-100 shadow-xl">
             <figure>
                 <PhotoProvider>
                     <PhotoView src={img}>

@@ -40,16 +40,12 @@ const router=createBrowserRouter([
         },
         {
           path:'/myreviews',
-          element:<PrivetRoute>
-            <MyReviews></MyReviews>
-          </PrivetRoute>
+          element: <MyReviews></MyReviews>
   
           },
           {
             path:'/servicesAdd',
-            element:<PrivetRoute>
-              <ServicesAdd></ServicesAdd>
-            </PrivetRoute>
+            element:  <ServicesAdd></ServicesAdd>
           },
           {
             path:"/blogs",

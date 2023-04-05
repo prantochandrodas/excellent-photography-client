@@ -21,7 +21,7 @@ const HeaderBanner = () => {
         autoplaySpeed: 3000,
     };
     return (
-        <div>
+        <div data-aos="zoom-in-up" data-aos-duration="1000">
              <Slider {...settings} className="carousel">
                 <div className='carousel_child'>
                     <img src={banner} style={{ width: '100%' }} alt="" />
