@@ -36,7 +36,7 @@ const Headers = () => {
         </div>
     </>
     return (
-        <div className="navbar text-white font-bold" style={{background:'#eee',color:'#434343'}}>
+        <div className="navbar text-white backc" style={{background:'#eee',color:'#000000'}}>
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">

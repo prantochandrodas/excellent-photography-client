@@ -14,8 +14,8 @@ const Home = () => {
             <HeaderBanner></HeaderBanner>
             <HomeBlogs></HomeBlogs>
             <div>
-                <h1 className='text-5xl font-bold ml-12'>Services</h1>
-                <div className='grid lg:grid-cols-3 grid-cols md:grid-cols-2 gap-5 p-14'>
+                <h1 className='text-2xl font-semibold text-center my-4'>Services</h1>
+                <div className='grid lg:grid-cols-3 grid-cols md:grid-cols-2 gap-5 lg:p-14 w-[90%] mx-auto'>
 
                     {
                         services.map(service => <HomeServices
@@ -28,7 +28,7 @@ const Home = () => {
                      <Link to={`/services`}><button className="btn btn-success ">See all</button></Link>
                 </div>
             </div>
-            <HomeSocialMedia></HomeSocialMedia>
+          
            
         </div>
     );

@@ -7,7 +7,7 @@ const Services = () => {
     const services = useLoaderData();
     DynamicTitle('Services');
     return (
-        <div className=' lg:my-12'> 
+        <div className='lg:my-12'> 
             <h2 className='text-5xl text-center my-12'>All services</h2>
             <div className='grid lg:grid-cols-3 gap-12 lg:w-9/12 lg:mx-auto '>
                 {

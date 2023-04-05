@@ -3,7 +3,15 @@
     font-family: 'Noto Sans Miao', sans-serif!important;
 }
 .active {
-    background-color: #eee!important;
+    background-color: #eee;
     color: #1a73e8!important;
     border-bottom: 2px solid #1a73e8;
+}
+.backc{
+    background: #ffffff;
+    z-index:2;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
 }
