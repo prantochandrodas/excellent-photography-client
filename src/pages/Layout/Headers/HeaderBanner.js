@@ -1,9 +1,9 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import Slider from 'react-slick';
-import banner from '../../../assets/blogs/wedding-poses-8-1024x563.jpg';
-import banner1 from '../../../assets/blogs/2019-06-18_0031.jpg';
-import banner2 from '../../../assets/blogs/334840.jpg';
+import banner from '../../../assets/blogs/20190906-Banner.jpg';
+import banner1 from '../../../assets/blogs/small_beach_romatic_crear_wedding.jpg';
+import banner2 from '../../../assets/blogs/58442694_10161790090340074_6364936980559560704_o-1080x675.jpg';
 import banner3 from '../../../assets/blogs/what-will-people-remember-from-your-wedding-1200px.jpg';
 
 import "slick-carousel/slick/slick.css";
