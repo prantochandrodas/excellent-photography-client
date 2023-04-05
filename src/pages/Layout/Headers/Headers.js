@@ -18,15 +18,15 @@ const Headers = () => {
         <li className=""> <NavLink to='/servicesAdd'>Add Services</NavLink> </li>
         {user?.uid ?
 
-            <> <li className="mr-2"> <NavLink onClick={handelLogout}>LogOut</NavLink></li>
+            <> <li className="mr-2"> <Link onClick={handelLogout}>LogOut</Link></li>
             </>
             :
             <>  <li className=""> <NavLink to='/login'>Login</NavLink></li>
                 <li className=""> <NavLink to='/signin'>SignIn</NavLink></li></>
         }
 
-        <div className="avatar">
-            <div className="w-12 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+        <div className="avatar w-10">
+            <div className="w-10 my-auto rounded-full">
                 {user?.photoURL ?
                     <img alt="" src={user?.photoURL} /> :
 

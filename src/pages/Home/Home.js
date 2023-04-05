@@ -5,6 +5,7 @@ import HeaderBanner from '../Layout/Headers/HeaderBanner';
 import HomeBlogs from './HomeBlogs';
 import HomeServices from './HomeServices';
 import HomeSocialMedia from './HomeSocialMedia';
+import Photos from '../Photos/Photos';
 // home
 const Home = () => {
     const services = useLoaderData();
@@ -28,7 +29,7 @@ const Home = () => {
                      <Link to={`/services`}><button className="btn btn-success ">See all</button></Link>
                 </div>
             </div>
-          
+            <Photos></Photos>        
            
         </div>
     );
