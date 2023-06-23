@@ -10,6 +10,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './HeaderBanner.css'
 const HeaderBanner = () => {
+
+
     const settings = {
         dots: true,
         infinite: true,
@@ -19,24 +21,26 @@ const HeaderBanner = () => {
         autoplay: true,
         speed: 2000,
         autoplaySpeed: 3000,
+
     };
     return (
-        <div data-aos="zoom-in-up" data-aos-duration="1000">
+        <div className='header-color'>
              <Slider {...settings} className="carousel">
-                <div className='carousel_child'>
+                <div className='carousel_child kenburns-top'>
                     <img src={banner} style={{ width: '100%' }} alt="" />
                 </div>
-                <div className='carousel_child'>
+                <div className='carousel_child kenburns-top'>
                     <img src={banner1} style={{ width: '100%' }} alt="" />
                 </div>
-                <div className='carousel_child'>
+                <div className='carousel_child kenburns-top'>
                     <img src={banner2} style={{ width: '100%' }} alt="" />
                 </div>
-                <div className='carousel_child'>
+                <div className='carousel_child kenburns-top'>
                     <img src={banner3} style={{ width: '100%' }} alt="" />
                 </div>
             </Slider>
         </div>
+      
     );
 };
 

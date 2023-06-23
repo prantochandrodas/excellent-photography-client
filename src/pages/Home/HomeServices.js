@@ -13,7 +13,7 @@ const HomeServices = ({ service }) => {
             <figure>
                 <PhotoProvider>
                     <PhotoView src={img}>
-                        <img src={img} alt="" />
+                        <img src={img} alt="" className="h-[250px] w-[full]" />
                     </PhotoView>
                 </PhotoProvider>
             </figure>
