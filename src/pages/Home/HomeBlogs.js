@@ -24,7 +24,7 @@ const HomeBlogs = () => {
     // });
     return (
         <div className='blog-bg'>
-            <div className='lg:flex lg:flex-row-reverse sm:flex sm:flex-col-reverse lg:w-[90%]  mx-auto lg:my-10 sm:my-4 '>
+            <div className='lg:flex lg:flex-row-reverse sm:flex sm:flex-col-reverse lg:w-[90%]  mx-auto sm:my-4 '>
 
                 <div data-aos="zoom-in" data-aos-duration="1000" className='lg:w-9/12 flex flex-col items-center justify-center'>
                     <h2 id='style-h1'>WEDDING PHOTOGRAPHER SO IMPORTANT?</h2>

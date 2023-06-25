@@ -1,10 +1,11 @@
 import React from 'react';
 import DynamicTitle from '../Hooks/DynamicTitle';
-
+import './Blogs.css'
 const Blogs = () => {
     DynamicTitle('Blogs');
     return (
-        <section>
+        <section data-aos="zoom-in"
+        data-aos-duration="3000">
             <div class="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
                 <div class="max-w-3xl">
                     <h2 class="text-3xl font-bold sm:text-4xl">
@@ -21,16 +22,16 @@ const Blogs = () => {
                         />
                     </div>
 
-                    <div class="lg:py-16">
+                    <div class="lg:py-16 art">
                         <article class="space-y-4 text-gray-600">
-                            <h1 className='font-semibold text-2xl'>Nicola & Brent - Long Reef Golf Club</h1>
-                            <p>
+                            <h1 id='style-h1' className='font-semibold text-2xl'>Nicola & Brent - Long Reef Golf Club</h1>
+                            <p id='animate-charcter'>
                                 Hey Ronny <br /><br />
                                 Thank you so much for turning our photos around so quickly!!!
                                 <br /><br />We LOVE them all!!!!! We are so happy!!!
                             </p>
                             <br /><br />
-                            <p>
+                            <p id='animate-charcter'>
                                 Thank you again!!
                                 Nicola and Brent - wedding ceremony Governor Phillip Park reception Dunes Palm Beach
                             </p>

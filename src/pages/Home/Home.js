@@ -13,21 +13,22 @@ import Cta from '../Cta/Cta';
 import Stats from '../Stats/Stats';
 import Freatures from '../Features/Freatures';
 import Blogs from '../Blogs/Blogs';
+import './HomeServices.css'
 // home
 const Home = () => {
     const services = useLoaderData();
     DynamicTitle('Home');
     return (
         <div>
-            {/* <HeaderBanner></HeaderBanner> */}
+            <HeaderBanner></HeaderBanner>
             <HomeBlogs></HomeBlogs>
-            <div className='bgcolor' data-aos="zoom-in"
+            <div className='' data-aos="zoom-in"
                 data-aos-duration="1000">
-                <div className='title'>
-                    <h1 className='text-2xl font-semibold text-center py-4'>Services</h1>
+                <div id='title'>
+                    <h1 className='text-3xl font-semibold text-center '>Services</h1>
                 </div>
 
-                <div className='grid lg:grid-cols-3 grid-cols md:grid-cols-2 gap-5 lg:p-14 w-[90%] mx-auto'>
+                <div className='lg:mt-10 grid lg:grid-cols-3 grid-cols md:grid-cols-2 gap-5 lg:p-14 w-[90%] mx-auto'>
 
                     {
                         services.map(service => <HomeServices

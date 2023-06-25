@@ -16,7 +16,7 @@ const Stats = () => {
         },
     ]
     return (
-        <div>
+        <div data-aos="zoom-in" data-aos-duration="3000">
             <section className="py-14">
             <div className="max-w-screen-xl mx-auto px-4 text-gray-600 gap-x-12 justify-between md:px-8 lg:flex">
                 <div className="max-w-2xl mx-auto text-center lg:text-left lg:mx-0">

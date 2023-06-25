@@ -44,7 +44,8 @@ const OurTeam = () => {
         },
     ]
     return (
-        <div>
+        <div data-aos="zoom-in"
+        data-aos-duration="3000">
              <section className="py-14">
             <div className="max-w-screen-xl mx-auto px-4 text-center md:px-8">
                 <div className="max-w-xl mx-auto">

@@ -32,7 +32,7 @@ const Contact = () => {
         },
     ]
     return (
-        <div>
+        <div data-aos="zoom-in" data-aos-duration="3000">
             <main className="py-14">
             <div className="max-w-screen-xl mx-auto px-4 text-gray-600 md:px-8">
                 <div className="max-w-xl space-y-3">

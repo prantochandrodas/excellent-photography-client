@@ -3,7 +3,7 @@ import React from 'react';
 const Cta = () => {
     return (
         <div>
-            <div class="">
+            <div class="" data-aos="zoom-in" data-aos-duration="3000">
                 <div class="mx-auto max-w-screen-xl px-4 pb-8 pt-16 sm:px-6 lg:px-8">
                     <div class="mx-auto max-w-md">
                         <strong

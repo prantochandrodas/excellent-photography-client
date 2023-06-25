@@ -14,9 +14,11 @@ const Photos = () => {
     return (
         <div className='lg:mb-20 lg:mt-5 my-8'>
             <div data-aos="zoom-in" data-aos-duration="1000">
-                <h3 className='lg:text-2xl text-xl text-center mb-4'>PHOTGRAPHY</h3>
-                <h2 className='text-xl lg:text-4xl font-semibold text-center mb-4'>Discover Our Wedding Photoshoot</h2>
-                <p className='lg:px-32 text-xs px-4 text-center lg:text-lg mb-4'>We have complete wedding photoshoot packages from pre-wedding photography to holud wedding photography, couple photography<span className='hidden lg:inline'>, bridal photoshoot, and you name it. Explore how we capture your holy bond of love and make the special day of your life even more special.</span></p>
+                <div id='title' className='pb-10 hidden  lg:block'>
+                    <h1>PHOTGRAPHY</h1>
+                </div>
+                <h2 id='style-h1' className='text-xl lg:text-4xl font-semibold text-center mb-4 lg:ml-52'>Discover Our Wedding Photoshoot</h2>
+                <p id='animate-charcter' className='lg:px-32 text-xs px-4 text-center lg:text-lg mb-4'>We have complete wedding photoshoot packages from pre-wedding photography to holud wedding photography, couple photography<span className='hidden lg:inline'>, bridal photoshoot, and you name it. Explore how we capture your holy bond of love and make the special day of your life even more special.</span></p>
             </div>
             <div className='con'>
                 <div data-aos="zoom-in"
